@@ -32,7 +32,7 @@ export type IncidentType = (typeof INCIDENT_TYPES)[number];
 export const INCIDENT_SEVERITIES = ["low", "medium", "high", "critical"] as const;
 export type IncidentSeverity = (typeof INCIDENT_SEVERITIES)[number];
 
-export const ZONE_TYPES = ["safe", "caution", "restricted"] as const;
+export const ZONE_TYPES = ["safe", "caution", "restricted" , "emergency"] as const;
 export type ZoneType = (typeof ZONE_TYPES)[number];
 
 export const RISK_LEVELS = ["low", "medium", "high"] as const;

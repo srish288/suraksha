@@ -85,6 +85,10 @@ export interface Zone {
   description: string;
   center: LatLng;
   radiusMeters: number;
+  polygon?: LatLng[];
+  alertDistanceMeters?: number;
+  active?: boolean;
+  isSample?: boolean;
 }
 
 export interface RiskFactor {
@@ -98,6 +102,7 @@ export interface RiskAssessment {
   level: RiskLevel;
   score: number;
   factors: RiskFactor[];
+  assessedAt?: string;
 }
 
 export interface ZonesResponse {
