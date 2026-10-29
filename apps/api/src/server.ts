@@ -1,8 +1,10 @@
-﻿import express from "express";
+
+import express from "express";
 import authRoutes from "./routes/auth.routes.js";
 import { connectDB } from "./config/db.js";
 import cors from "cors";
 import incidentRoutes from "./routes/incident.routes.js";
+import qrRoutes from "./modules/identity/qr.routes.js";
 import helmet from "helmet";
 import morgan from "morgan";
 import { env } from "./config/env.js";
@@ -14,8 +16,10 @@ app.use(helmet());
 app.use(cors({ origin: env.CLIENT_URL }));
 app.use(express.json({ limit: "1mb" }));
 app.use(morgan("dev"));
+
 app.use("/api/auth", authRoutes);
 app.use("/api/incidents", incidentRoutes);
+app.use("/api/qr", qrRoutes);
 
 app.get("/api/health", (_req, res) => {
   res.status(200).json({
