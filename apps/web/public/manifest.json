@@ -1,0 +1,19 @@
+{
+  "name": "SURAKSHA — Smart Tourist Safety & Incident Response",
+  "short_name": "SURAKSHA",
+  "description": "Intelligent tourist safety monitoring, emergency SOS, and offline-first incident response system.",
+  "start_url": "/#/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/shield.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
